@@ -124,7 +124,7 @@ const UserReservations = () => {
                 Cancel
                 </button>
                 }
-                <button onClick={() => openRateBookModal(reservation.book.id)}>Rate</button>
+                {reservation.returned ? <button onClick={() => openRateBookModal(reservation.book.id)}>Rate</button> : ""}
               </td>
               </tr>
               ))}
