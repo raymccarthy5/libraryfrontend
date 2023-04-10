@@ -32,7 +32,7 @@
   "scripts": {
     "start": "node --max-old-space-size=4096 node_modules/react-scripts/bin/react-scripts.js start",
     "build": "react-scripts build",
-    "test": "ode --max-old-space-size=4096 node_modules/react-scripts/bin/react-scripts.js test",
+    "test": "node --max-old-space-size=4096 node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
