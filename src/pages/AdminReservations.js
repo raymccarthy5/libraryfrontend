@@ -155,13 +155,13 @@ return (
       previousLabel={"Previous"}
       nextLabel={"Next"}
       breakLabel={"..."}
-      pageCount={totalPages}
+      pageCount={totalPages > 0 ? totalPages : 1}
       marginPagesDisplayed={2}
       pageRangeDisplayed={5}
       onPageChange={handlePageClick}
       containerClassName={"pagination"}
       activeClassName={"active"}
-      forcePage={page > 0 ? page - 1 : 0} 
+      forcePage={page > 0 && totalPages > 0 ? page - 1 : 0}
     />
     </div>
     </>
