@@ -152,7 +152,7 @@ return (
       onPageChange={handlePageClick}
       containerClassName={"pagination"}
       activeClassName={"active"}
-      forcePage={page - 1} // Add this line
+      forcePage={page > 0 ? page - 1 : 0} 
     />
     <Link to={`/add-user`}><button className="mb-5">Add User</button></Link>
     </>

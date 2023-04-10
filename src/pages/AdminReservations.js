@@ -161,7 +161,7 @@ return (
       onPageChange={handlePageClick}
       containerClassName={"pagination"}
       activeClassName={"active"}
-      forcePage={page - 1} 
+      forcePage={page > 0 ? page - 1 : 0} 
     />
     </div>
     </>
