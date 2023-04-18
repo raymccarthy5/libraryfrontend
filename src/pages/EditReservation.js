@@ -167,15 +167,30 @@ const EditReservation = () => {
                 <p>Return Date: {formatDate(reservation?.dueDate)}</p>
                 <p>Returned: {reservation?.checkedOutAt? (reservation?.returned ? 'Yes' : 'No') : 'N/A'}</p>
               </Card.Text>
-                <button onClick={handleShowExtendModal}>Extend</button>
+                { reservation.checkedOutAt ? (
+                <button onClick={() => handleShowExtendModal(reservation.id)}>Extend</button>) : <button
+                disabled={!reservation.checkedOutAt}
+                className={!reservation.checkedOutAt ? "btn btn-secondary" : "button"}
+                >Extend</button>
+                }
                 { !reservation.checkedOutAt ? (
                 <button onClick={() => handleShowCancelModal(reservation.id)}>Cancel</button>) : <button
                 disabled={reservation.checkedOutAt}
                 className={reservation.checkedOutAt ? "btn btn-secondary" : "button"}
                 >Cancel</button>
                 }
-                <button onClick={handleShowCheckinModal}>Checkin</button>
-                <button onClick={handleShowCheckoutModal}>Checkout</button>
+                { reservation.checkedOutAt ? (
+                <button onClick={() => handleShowCheckinModal(reservation.id)}>Check-in</button>) : <button
+                disabled={!reservation.checkedOutAt}
+                className={!reservation.checkedOutAt ? "btn btn-secondary" : "button"}
+                >Check-in</button>
+                }
+                { !reservation.checkedOutAt ? (
+                <button onClick={() => handleShowCheckoutModal(reservation.id)}>Check-out</button>) : <button
+                disabled={reservation.checkedOutAt}
+                className={reservation.checkedOutAt ? "btn btn-secondary" : "button"}
+                >Check-out</button>
+                }
             </Card.Body>
           </Card>
         </Col>

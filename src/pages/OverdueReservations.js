@@ -84,8 +84,8 @@ const OverdueBooks = () => {
       </TabList>
 
     <TabPanel>
+    <div className="container-xxl mt-2">
     <h2 className='m-5'>Overdue Returns</h2>
-    <div className='m-5'>
       <table>
         <thead>
           <tr>
@@ -121,8 +121,8 @@ const OverdueBooks = () => {
     </div>
     </TabPanel>
     <TabPanel>
+    <div className="container-xxl mt-2">
     <h2 className='m-5'>Overdue Pick-ups</h2>
-    <div className='m-5'>
       <table>
         <thead>
           <tr>

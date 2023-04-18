@@ -83,10 +83,7 @@ const AddReservation = () => {
                 <p>Return Date: {formatDate(reservation?.dueDate)}</p>
                 <p>Returned: {reservation.checkedOutAt ? (reservation?.returned ? 'Yes' : 'No') : 'N/A'}</p>
               </Card.Text>
-              <button>Extend</button>
-              <button>Cancel</button>
-              <button>Checkin</button>
-              <button>Checkout</button>
+              <Link to={`/edit-reservation/${reservation.id}`}><button>Manage Reservation</button></Link>
             </Card.Body>
           </Card>
           <Link to="/admin-reservations">

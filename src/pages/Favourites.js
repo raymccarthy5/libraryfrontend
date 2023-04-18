@@ -93,7 +93,7 @@ const Favourites = () => {
       <>
       <div className="container m-5 input-group">
       </div>
-      <div><h2>Favourites</h2><p style={{ color: 'red' }}>To-do: Pagination, Sorting</p></div>
+      <h2 className="mb-5">Favourites</h2>
       <div className="table-responsive">
       { books.length > 0 ? (
       <table className="mb-5">
