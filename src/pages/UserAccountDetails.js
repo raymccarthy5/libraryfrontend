@@ -92,6 +92,11 @@ const UserAccountDetails = () => {
     return <p>Loading...</p>;
   }
 
+  const disabledStyle = {
+    opacity: 0.6,
+    pointerEvents: 'none',
+  };
+
   return (
     <>
     <div className='container-xxl'>
@@ -121,8 +126,11 @@ const UserAccountDetails = () => {
               <Link to="/change-password"><button>Change Password</button></Link>
               <Stripe
                 stripeKey="pk_test_51Hs4PpDNHqlXLssuLBb1e6Diq8zmEWDewsbZ6VhDX1k1S0UNJpiZPnYPKt7mKdqqllq5QatcKnhax4ExJkoDLXvE002V3T0UDu"
-                token={handleToken} label="Pay Your Fine"
-            />
+                token={handleToken}
+                label="Pay Your Fine"
+                disabled={!user?.fine}
+                style={!user?.fine ? disabledStyle : {}}
+              />
             </Card.Body>
           </Card>
         </Col>
