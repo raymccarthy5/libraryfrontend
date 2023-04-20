@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 const LOGIN_URL = '/auth/authenticate';
 
 const Login = () => {
-  const { setIsLoggedIn, setIsAdmin, setId, setToken } = useContext(AuthContext);
+  const { setIsLoggedIn, setIsAdmin, setId } = useContext(AuthContext);
 
   const emailRef = useRef();
   const errRef = useRef();
@@ -47,8 +47,6 @@ const Login = () => {
       setIsAdmin(role === 'ADMIN');
       localStorage.setItem('userId', id);
       setId(id);
-      localStorage.setItem('token', token);
-      setToken(token);
 
       setEmail('');
       setPwd('');
