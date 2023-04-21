@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import axios from "../api/axios";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
-import formatDate from "../components/formatDate";
+import formatDate from "../utils/formatDate";
 import { toast } from "react-toastify";
 import ReactPaginate from "react-paginate";
 

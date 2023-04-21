@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from '../api/axios';
 import { Card, Col, Row, Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import formatDate from '../components/formatDate';
+import formatDate from '../utils/formatDate';
 import { toast } from 'react-toastify';
 import ReactModal from "react-modal";
 

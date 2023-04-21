@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from '../api/axios';
 import { Card, Col, Row, Modal } from "react-bootstrap";
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import formatDate from '../components/formatDate';
+import formatDate from '../utils/formatDate';
 import { toast } from 'react-toastify';
 
 

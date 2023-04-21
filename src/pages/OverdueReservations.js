@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../api/axios';
-import formatDate from '../components/formatDate';
+import formatDate from '../utils/formatDate';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { toast } from 'react-toastify';

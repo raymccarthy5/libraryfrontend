@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from '../api/axios';
 import { Card, Col, Row } from "react-bootstrap";
 import AuthContext from "../context/AuthProvider";
-import formatDate from "../components/formatDate";
+import formatDate from "../utils/formatDate";
 import { Link } from 'react-router-dom';
 import Stripe from "react-stripe-checkout";
 import { toast } from 'react-toastify';

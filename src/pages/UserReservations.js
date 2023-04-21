@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from '../api/axios';
 import { Card, Col, Row } from "react-bootstrap";
 import AuthContext from "../context/AuthProvider";
-import formatDate from "../components/formatDate";
+import formatDate from "../utils/formatDate";
 import { toast } from 'react-toastify';
 import ReactModal from "react-modal";
 import StarRating from '../components/StarRating';
