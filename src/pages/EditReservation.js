@@ -158,8 +158,6 @@ const EditReservation = () => {
           <Card className='mb-5'>
             <Card.Body>
               <Card.Title>Reservation Details</Card.Title>
-              
-              
               <Card.Text>
                 <p>Reserved At: {formatDate(reservation?.reservedAt)}</p>
                 <p>Pick Up By: {formatDate(reservation?.pickUpBy)}</p>
@@ -183,17 +181,12 @@ const EditReservation = () => {
                       Extend
                     </button>
                     )}
-
-
                 { !reservation.checkedOutAt ? (
                 <button onClick={() => handleShowCancelModal(reservation.id)}>Cancel</button>) : <button
                 disabled={reservation.checkedOutAt}
                 className={reservation.checkedOutAt ? "btn btn-secondary" : "button"}
                 >Cancel</button>
                 }
-
-
-
                 { reservation.checkedOutAt ? (
                   <button
                     onClick={() => handleShowCheckinModal(reservation.id)}
@@ -210,10 +203,6 @@ const EditReservation = () => {
                     Check-in
                   </button>
                 )}
-
-
-
-
                 { !reservation.checkedOutAt ? (
                 <button onClick={() => handleShowCheckoutModal(reservation.id)}>Check-out</button>) : <button
                 disabled={reservation.checkedOutAt}
