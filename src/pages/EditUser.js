@@ -64,7 +64,11 @@ const EditUser = () => {
         navigate("/admin-users");
       })
       .catch((err) => {
-        console.error(err);
+        if (err.response && err.response.data && err.response.data.message) {
+          toast.error(err.response.data.message);
+        } else {
+          toast.error("Can't delete user with unpaid fine");
+        }
         setLoading(false);
       });
   };
